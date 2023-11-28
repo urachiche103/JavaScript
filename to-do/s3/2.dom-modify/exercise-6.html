@@ -1,0 +1,27 @@
+<!-- Basandote en el siguiente array crea una lista ul > li con los textos del array y metelo en el html. -->
+
+<!-- const apps = ['Facebook', 'Netflix', 'Instagram', 'Snapchat', 'Twitter']; -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let apps = ['Facebook', 'Netflix', 'Instagram', 'Snapchat', 'Twitter'];
+        let listaUl = document.createElement('ul');
+        apps.forEach(app => {
+            let listItem = document.createElement('li');
+            listItem.textContent = app;
+            listaUl.appendChild(listItem);
+        });
+        document.body.appendChild(listaUl);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!-- Inserta dinamicamente en un html un div que contenga una p con javascript. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let newDiv = document.createElement('div');
+        let newText = document.createElement('p');
+        newText.textContent = '¡Hello world!';
+        newDiv.appendChild(newText);
+        document.body.appendChild(newDiv);
+    </script>
+</body>
+
+</html>

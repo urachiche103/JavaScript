@@ -7,11 +7,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- <script src="./exercise-1.js"></script> -->
 </head>
 
 <body>
     <button class="showme">Pillame!</button>
     <script>
+        let showmeButton = document.querySelector('.showme');
+        console.log(showmeButton);
         for (let articulo of articulos) {
             articulo.addEventListener('mouseover', () => {
                 articulo.childNodes[3].className = "par-animado";
