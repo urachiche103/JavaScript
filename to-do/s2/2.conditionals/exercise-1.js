@@ -1,6 +1,4 @@
-// Comprueba en cada uno de los usuarios que tenga almenos dos trimestres aprobados y 
-// añade la propiedad isApproved a true o false en consecuencia. Una vez lo tengas compruebalo con un console.log.
-
+// Comprueba en cada uno de los usuarios que tenga almenos dos trimestres aprobados y añade la propiedad isApproved a true o false en consecuencia. Una vez lo tengas compruebalo con un console.log.
 
 let alumns = [
     {name: 'Pepe Viruela', T1: false, T2: false, T3: true}, 
@@ -10,32 +8,20 @@ let alumns = [
     {name: 'Raquel Benito', T1: true, T2: true, T3: true}
 ]
 
+let isApproved;
+let approved = new Array;
+
 for (let i = 0; i < alumns.length; i++) {
-    let status = alumns[i].T1 && (alumns[i].T2 || alumns[i].T3);
-    console.log(alumns[i].name, "is ", status);
+    isApproved = false;
+    if ((alumns[i].T1 && alumns[1].T2) || (alumns[i].T1 && alumns[1].T3) || (alumns[i].T2 && alumns[1].T3) === true) {
+        isApproved = true;
+    }
+    if (isApproved === true) {
+        console.log(alumns[i].name, ': Aprobado', isApproved);
+        approved.push(alumns[i]);
+    } else {
+        console.log(alumns[i].name, ': Aprobado', isApproved);
+    }
 }
 
-//     for (let i = 0; i < alumns.length; i++) {
-//         if (alumns[i].trimester.filter(trimester => trimester).length >= 2) {
-//             alumns.isApproved = true;
-//         } else {
-//             alumns.[i].isApproved = false;
-//         }
-//     }
-// console.log(alumns)
-
-// const users = [
-//     { name: "John", quarters: [true, true, false, true] },
-//     { name: "Jane", quarters: [true, false, true, true] },
-//     { name: "Mike", quarters: [false, true, false, true] }
-// ];
-
-// for (let i = 0; i < users.length; i++) {
-//     if (users[i].quarters.filter(quarter => quarter).length >= 2) {
-//     users[i].isApproved = true;
-//     } else {
-//     users[i].isApproved = false;
-//     }
-// }
-
-// console.log(users);
+console.log('Los alumnos aprobados son: ',approved);

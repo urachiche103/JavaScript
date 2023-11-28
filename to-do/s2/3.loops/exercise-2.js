@@ -6,3 +6,7 @@ const alien = {
     planet: 'Eden',
     weight: '259kg'
 }
+
+    for (let data in alien) {
+    console.log(`${data}: ${alien[data]}`);
+}
